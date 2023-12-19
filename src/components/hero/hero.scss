@@ -1,0 +1,94 @@
+.hero{
+    height: calc(100vh - 100px);
+    background: linear-gradient(180deg,#0c0c1d,#111132);
+    position: relative;
+
+    .wrapper{
+        max-width: 1000px;
+        height: 90%;
+        margin: auto;
+        .textContainer{
+            width: 60%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 40px;
+            .typeWrite{
+                h1{
+                    overflow: hidden; /* Ensures the content is not revealed until the animation */
+                    border-right: .15em solid orange; /* The typwriter cursor */
+                    white-space: nowrap; /* Keeps the content on a single line */
+                    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+                    letter-spacing: .15em; /* Adjust as needed */
+                    animation: 
+                      typing 4.5s steps(40, end),
+                      blink-caret .75s step-end infinite;
+                      color: rgb(255, 255, 255);
+                }
+                @keyframes typing {
+                    from { width: 0 }
+                    to { width: 100% }
+                  }
+                  
+                  /* The typewriter cursor effect */
+                  @keyframes blink-caret {
+                    from, to { border-color: transparent }
+                    10% { border-color: rgb(136, 4, 96);  }
+                  }
+                  
+            }
+            h2{
+                font-size: 30px;
+                color: rebeccapurple;
+                letter-spacing: 10px;
+            }
+            h1{
+                font-size: 40px;
+            }
+            .buttons{
+                button{
+                    padding: 20px;
+                    border: 1px solid white;
+                    border-radius: 10px;
+                    background-color: transparent;
+                    color: white;
+                    margin-right: 20px;
+                    font-weight: 30;
+                    cursor: pointer;
+                }
+    
+            }
+
+            img{
+                width: 50px;
+            }
+        }
+    }
+
+    .imageContainer{
+        height: 100%;
+        position: absolute;
+        top: 45px;
+        right: 0;
+        // img{
+        //     // height: 510px;
+        // }
+    }
+    .effect{
+        width: 100px;
+        position: absolute;
+        top: 10px;
+    }
+    .slindingTextContainer{
+        position: absolute;
+        font-size: 30vh;
+        bottom: -20px;
+        white-space: nowrap;
+        color: #ffffff09;
+        width: 100%;
+        overflow-x: hidden;
+        font-weight: bold;
+    }
+
+}
