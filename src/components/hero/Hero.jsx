@@ -57,7 +57,7 @@ const Hero = () => {
         <motion.div className="textContainer" variants={textVariants} initial="initial" animate="animate" >
           <motion.h2>ADEL KHAYATI</motion.h2>
           <div className="typeWrite">
-          <motion.h1>Web Developer Full Stack Mern</motion.h1>
+          <motion.h1>Web Developer React</motion.h1>
           </div>
           {/* <motion.div className="buttons">
             <motion.button>See the Latest Works</motion.button>
@@ -71,7 +71,7 @@ const Hero = () => {
       </motion.div>
       <motion.div className="imageContainer" variants={textVariants} initial="initial" animate="animate">
     
-        <img src="/hero.png" alt="" />
+        <img src="/hero1.png" alt="" />
  
       </motion.div>
       {/* <div className="effect">

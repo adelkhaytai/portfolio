@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import "./services.scss";
-import { animate, motion , useInView } from "framer-motion";
+import { animate, motion, useInView } from "framer-motion";
 
 const variants = {
   initial: {
@@ -20,9 +20,8 @@ const variants = {
 };
 
 const Services = () => {
-
-  const ref = useRef()
-  const isInView = useInView(ref,{margin:"-100px"} )
+  const ref = useRef();
+  const isInView = useInView(ref, { margin: "-100px" });
   return (
     <motion.div
       className="services"
@@ -31,29 +30,34 @@ const Services = () => {
       // animate="animate"
       // whileInView="animate"
       ref={ref}
-      animate = {isInView && "animate"}
+      animate={"animate"}
     >
       <motion.div className="textContainer" variants={variants}>
         <p>
-          I focus on helping your brand grow <br />
-          and move forward
+          Je me concentre sur l'aide à la croissance de votre marque et avancer
         </p>
         <hr />
       </motion.div>
       <motion.div className="titleContainer" variants={variants}>
         <div className="title">
-          <img src="/people.webp" alt="" />
+          {/* <img src="/people.webp" alt="" /> */}
           <h1>
-            {" "}
-            <motion.b whileHover={{color:"rgba(2, 255, 36, 0.726)"}}>Unique</motion.b> Ideas{" "}
+            {"  "}
+            <motion.b whileHover={{ color: "rgba(2, 255, 36, 0.726)" }}>
+              Utiliser
+            </motion.b>{" "}
+            les dernières technologies{" "}
           </h1>
         </div>
         <div className="title">
           <h1>
-            <motion.b whileHover={{color:"rgba(2, 255, 36, 0.726)"}}>For Your </motion.b>
-            Business
+            <motion.b whileHover={{ color: "rgba(2, 255, 36, 0.726)" }}>
+              {" "}
+              pour créer{" "}
+            </motion.b>
+            des sites Web
           </h1>
-          <button><b>What We Do?</b></button>
+          {/* <button><b>What We Do?</b></button> */}
         </div>
       </motion.div>
       <motion.div className="listContainer" variants={variants}>
@@ -62,57 +66,92 @@ const Services = () => {
           whileHover={{ background: "lightgray", color: "black" }}
         >
           {" "}
-          <h2>Branding</h2>
+          <h2>Compétences utilisées sur React front-end</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-            veritatis recusandae debitis eligendi unde eius eum placeat
-            voluptates molestiae soluta maiores odio, repudiandae sit animi
-            delectus, vel obcaecati optio assumenda.
+          <li>JSX </li>
+              <li>State Management</li>
+              <li>Composants Contrôlés </li>
+              <li>React Router </li>
+              <li>Hooks </li>
+              <li>RESTful API Integration</li>
+              <li>Responsive Design </li>
+              <li>Testing </li>
+              <li>État de l'Art CSS </li>
+              <li>Gestion des États Avancée </li>
+              <li>Optimisation des Performances</li>
+
           </p>
-          <button>Go</button>
         </motion.div>
+
+        {/* <motion.div
+          className="box"
+          whileHover={{ background: "lightgray", color: "black" }}
+        >
+          {" "}
+          <h2>Compétences utilisées sur expres</h2>
+          <p>
+          <li>State Management</li>
+              <li>Composants Contrôlés </li>
+              <li>React Router </li>
+              <li>Hooks </li>
+              <li>RESTful API Integration</li>
+              <li>Responsive Design </li>
+              <li>Testing </li>
+              <li>État de l'Art CSS </li>
+              <li>Gestion des États Avancée </li>
+              <li>Optimisation des Performances</li>
+          </p>
+        </motion.div> */}
+
         <motion.div
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
           {" "}
-          <h2>Branding</h2>
+          <h2>Compétences utilisées coté design</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-            veritatis recusandae debitis eligendi unde eius eum placeat
-            voluptates molestiae soluta maiores odio, repudiandae sit animi
-            delectus, vel obcaecati optio assumenda.
+            <ul>
+            <li>css</li>
+              <li>CSS Layout</li>
+              <li>Sass </li>
+              <li>Tailwind CSS </li>
+              <li>Bootstrap</li>
+              <li>Material-UI</li>
+              <li>css</li>
+              <li>CSS Layout</li>
+              <li>Sass </li>
+              <li>Tailwind CSS </li>
+              <li>Bootstrap</li>
+              <li>Material-UI</li>
+              
+            </ul>
           </p>
-          <button>Go</button>
         </motion.div>
+
         <motion.div
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
           {" "}
-          <h2>Branding</h2>
+          <h2>Compétences utilisées coté back-end</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-            veritatis recusandae debitis eligendi unde eius eum placeat
-            voluptates molestiae soluta maiores odio, repudiandae sit animi
-            delectus, vel obcaecati optio assumenda.
+            <ul>
+              <li>Node.js Fundamentals</li>
+              <li>Express.js Framework</li>
+              <li>RESTful API Design </li>
+              <li>Middleware </li>
+              <li>Gestion des Routes</li>
+              <li>Base de Données noSql / sql</li>
+              <li>
+                  Sécurité :Connaissance des meilleures pratiques de sécurité
+                </li>
+                <li>Gestion des Erreurs</li>
+                <li>Gestion des Erreurs </li>
+                <li>Optimisation des Performances</li>
+            </ul>
           </p>
-          <button>Go</button>
         </motion.div>
-        <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
-        >
-          {" "}
-          <h2>Branding</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-            veritatis recusandae debitis eligendi unde eius eum placeat
-            voluptates molestiae soluta maiores odio, repudiandae sit animi
-            delectus, vel obcaecati optio assumenda.
-          </p>
-          <button>Go</button>
-        </motion.div>
+        
       </motion.div>
     </motion.div>
   );

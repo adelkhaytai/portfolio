@@ -1,3 +1,4 @@
+@import "../../app.scss";
 .hero{
     height: calc(100vh - 100px);
     background: linear-gradient(180deg,#0c0c1d,#111132);
@@ -14,6 +15,13 @@
             flex-direction: column;
             justify-content: center;
             gap: 40px;
+            @include mobile {
+                height: 50%;
+                width: 100%;
+                gap: 20px;
+                align-items: center;
+                text-align: center;
+            }
             .typeWrite{
                 h1{
                     overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -22,19 +30,21 @@
                     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
                     letter-spacing: .15em; /* Adjust as needed */
                     animation: 
-                      typing 4.5s steps(40, end),
+                      typing 3.5s steps(40, end) ,
                       blink-caret .75s step-end infinite;
                       color: rgb(255, 255, 255);
                 }
+                
                 @keyframes typing {
                     from { width: 0 }
+                    
                     to { width: 100% }
                   }
                   
                   /* The typewriter cursor effect */
                   @keyframes blink-caret {
                     from, to { border-color: transparent }
-                    10% { border-color: rgb(136, 4, 96);  }
+                    10% { border-color: rgba(255, 255, 255, 0.176);  }
                   }
                   
             }
@@ -45,6 +55,9 @@
             }
             h1{
                 font-size: 40px;
+                @include mobile {
+                    font-size: 18px;
+                }
             }
             .buttons{
                 button{
@@ -71,9 +84,18 @@
         position: absolute;
         top: 0px;
         right: 0;
-        // img{
-        //     // height: 510px;
-        // }
+        @include mobile {
+            width: 100%;
+            height: 53%;
+            bottom: 0;
+            top: unset;
+            bottom: 0;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
     }
     .effect{
         width: 100px;

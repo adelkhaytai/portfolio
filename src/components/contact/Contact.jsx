@@ -67,12 +67,13 @@ const Contact = () => {
           <span>(+216) 20181266</span>
         </motion.div>
       </motion.div>
+      
       <div className="formContainer">
         <motion.div
           className="phoneSvg"
           initial={{ opacity: 1 }}
           whileInView={{ opacity: 0 }}
-          transition={{ duration: 1, delay: 3 }}
+          transition={{ duration: 1, delay: 2.5 }}
         >
           <svg
             fill="#000000"
@@ -115,7 +116,7 @@ const Contact = () => {
           onSubmit={sendEmail}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 4 }}
+          transition={{ duration: 1, delay: 3 }}
         >
           <input type="text" required placeholder="Name" name="name"/>
           <input type="email" required placeholder="Email" name="email" />
